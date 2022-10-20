@@ -1,0 +1,234 @@
+::-webkit-scrollbar { width: 0;}
+body {
+       overflow:hidden;
+    }
+    
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -99;
+    background: url(images/bg-poster.png) no-repeat #384657;
+    background-size: cover;
+}
+*{
+    box-sizing: border-box;
+}
+#video-bg > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto; 
+}
+
+@supports (object-fit: cover) {
+    #video-bg > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+#start {
+    display: none;
+    background: #FFF;
+    width: 600px;
+    height: 520px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2px 20px;
+    margin: 80px auto;
+    font-family: arial black;
+    font-size: 24px;
+    opacity: 0%;
+}
+
+#start h1 {
+    color:rgb(209, 203, 192);
+    text-size-adjust: 1em;
+    letter-spacing: 0.3em;
+    padding-bottom:   30px;
+}
+#start h2 {
+    color:rgb(209, 203, 192);
+    text-size-adjust: 2em;
+    letter-spacing: 0.3em;
+    font-size: 1em;
+    padding-bottom:   30px;
+}
+#start h2 input{
+    color:rgb(209, 203, 192);
+    text-size-adjust: 2em;
+    letter-spacing: 0.3em;
+    font-size: 1em;
+    outline: none;
+border: none;
+border: solid 1px #f2f2f2;
+caret-color: rgb(109, 141, 154);
+}
+
+
+#start #select-player {
+    width: 475px;
+    margin: 0 auto;
+}
+#start #select-player span {
+    border-radius: 10px;
+    display: block;
+    float: left;
+    padding: 30px;
+    cursor: pointer;
+}
+
+#start #select-player span.selected {
+    border: 2px solid #326184;
+}
+#start button {
+    padding: 20px 60px;
+    font-size: 24px;
+    font-family: arial black;
+    background: #e6dfd9;
+    border-radius: 50px;
+    border: 4px solid #336184;
+    cursor: pointer;
+    margin: 20px;
+    outline: none;
+    color: rgb(234, 169, 28);
+    text-transform: uppercase;
+}
+#start button:hover, 
+#start h2 :hover
+ {
+    background: #8a7868;
+}
+
+header{
+    display: flex;
+   justify-content: space-between;
+   /* background: url("./img/dashboard.png") no-repeat;   */
+    margin: 0;
+    padding: 0;
+    z-index: -99;
+   width: 100%;
+}
+.namePlay{
+    display: flex;
+}
+
+.life span {
+    height: 100%;
+    width: 100%;
+    left: 2%;
+    top: 13%;
+    background: url("./img/life.jpg") no-repeat;
+}
+.namePlay{
+    width: 200px;
+    justify-content: space-between;
+    margin-right: 200px;
+    margin-top: -10px;
+}
+
+.life{
+    margin-left: 2%;
+    margin-top: 0.3%;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container{
+    background: url("./img/background-field.png") no-repeat;  
+    z-index: -99%;
+    width: 100%;
+    height: 900px;
+    background-size: 100% auto;
+   
+}
+
+
+.zmiya{
+   
+    box-shadow: 10px 5px 5px,#233541;
+    display: flex;
+    width: 60px;
+    height: 20px;
+    position: absolute;
+    z-index: 5;
+   background: #064102;
+   left: 50%;
+   top: 60%;
+   border-radius: 50%;
+   -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+   
+}
+.zmiya1{
+    width: 70px;
+    height: 20px;
+    box-shadow: 10px 5px 5px,#233541;           
+    z-index: 5;
+   background: #10a352;
+   left: 50%;
+   top: 60%;
+   border-radius: 50%;
+   -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+   
+}
+/*
+Выиграш
+*/
+#win {
+	display: none;
+	position: absolute;
+    text-align: center;
+	left: 30%;
+    top:10%;
+   
+    }
+    /*
+Конец игры
+*/
+.over {
+	 display: none; 
+    text-align: center;
+	position: absolute;
+	left: 30%;
+    top: 10%;
+
+    }
+/*
+Кнопка
+*/
+#btn {
+	position: absolute;
+    top: 84%;
+    left: 30%;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: arial black;
+    background: #219f25;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+}
+
+.bonusHeder span{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    
+}

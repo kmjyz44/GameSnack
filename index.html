@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmiyka</title>
+</head>
+<link rel="stylesheet" href="./style.css">
+<body>
+    <div id = "game">
+
+    <audio  autoplay="autoplay">
+        <source src="./mp3/zmiya_zastavka.mp3" type="audio/mp3">
+        </audio>
+    </div>
+        
+    <div id="video-bg">
+	    <video width="100%" height="auto" preload="auto"    muted="true" poster="images/bg-poster.png">
+	        <source src="./img/zmiya.mp4" type="video/mp4"></source>
+	        <source src="./img/zmiya.webm" type="video/webm"></source>
+	    </video>
+	</div>
+
+    <div id="start">
+        <h1>Snake</h1>
+        <h2>Level:_ <input id="level" type="range" min="4" max="170" step="1" value="7" > </h2>
+        <h2>Name:_ <input id = "name" type="text" min="0" max="8" > </h2>
+        <button id="startBtn">Start</button>
+    </div>
+</div>
+	<div class="app" style="display:none">
+        <header>
+        <div class="life">
+        </div>
+<div class="bonusHeder">
+    <span></span>
+</div>
+        <div class="namePlay">
+            <h2 class="namePl">name</h2>
+            <h2 class="score">0</h2>
+        </div>
+</header>
+<div class="obstaclesDiv"></div>
+<div class="container">
+    <div class="bonusDiv">
+        
+    </div>
+
+</div>
+</div>
+
+
+
+<div class="over" style="display: none;">
+    <span>
+        <img src="./img/game-over-gif-animado-2.gif">
+    </span>
+    <div>
+        <button id="btn">Почати знову</button>
+    </div>
+</div>
+
+<div id="win">
+    <span>
+        <img src="./img/giphy.gif">
+    </span>
+    <div>
+        <button id="btn">Почати знову</button>
+    </div>
+</div>
+
+   
+    <script src="./main.js"></script>
+</body>
+</html>
